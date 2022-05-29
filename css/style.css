@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+}
+body {
+  background-color: teal;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  border: 0;
+  background-color: lightcoral;
+  outline: 0;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 2px;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0.4;
+  margin: 5px;
+}
+.active {
+  pointer-events: all;
+  opacity: 1;
+}
+.cont {
+  padding: 20px;
+  background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.text_cont {
+  background-color: #eeee;
+  padding: 20px;
+  border-radius: 5px;
+  overflow: auto;
+}
+.text_cont .correct {
+  background-color: lightseagreen;
+  color: white;
+  /* padding: 2px 4px; */
+}
+.text_cont .uncorrect {
+  background-color: lightcoral;
+  color: white;
+}
+.controlls {
+  display: grid;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+.controlls span {
+  padding: 10px 6px;
+  background-color: lightseagreen;
+  border-radius: 2px;
+  color: white;
+  margin: 5px;
+}
+.alret {
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 30px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: rgb(196, 31, 31);
+  transition: left 0.5s ease-in-out;
+}
+.active_alret {
+  left: 50%;
+}
+@media screen and (max-width: 465px) {
+  .cont {
+    height: 100%;
+    width: 100%;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+  }
+  .controlls {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  .controlls span {
+    background-color: #fff;
+    color: teal;
+    font-weight: bold;
+  }
+  .controlls button {
+    background-color: darkslategrey;
+  }
+  .text_cont {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 0px;
+  }
+  .text_cont p span {
+    font-size: 0.9rem;
+  }
+  .alret {
+    text-align: center;
+    width: 100%;
+    font-size: 1rem;
+  }
+}
