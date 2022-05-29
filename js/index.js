@@ -5,7 +5,7 @@ import { Timer } from './timer.js';
 
 //======== Global Objects ==========>
 const draw = new DrawUi();
-export const timer = new Timer({ start: 30, end: 0, speed: 100 });
+export const timer = new Timer({ start: 30, end: 0, speed: 1000 });
 const input = new Input();
 //======= Global Objects ===========>
 
@@ -52,3 +52,7 @@ document.querySelector('.again').addEventListener('pointerdown', (e) => {
     draw.Drawer();
 })
 //=========== Set Timer Controlls Events ============>
+
+window.addEventListener('keydown', () => {
+    console.log(document.querySelector('.typer').value);
+})
