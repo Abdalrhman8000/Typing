@@ -12,7 +12,10 @@ export class Input {
     //===============  Check Statues And Keys ==================>
     Inputer({ statement, event }) {
         if (statement) {
+            //============ Element To Appende On P ==============>
             this.ele = document.querySelectorAll('.text_cont p span');
+            //============ Active Small Media ==============>
+            document.querySelector('.typer').focus();
             if (event.key.search(/[a-z]/g) == 0 || event.key.search(/[a-z]/g) == -1) {
                 this.Appender(event, this.ele);
             } else if (event.key.search(/[a-z]/g) == 1 && event.key != 'Backspace') {
